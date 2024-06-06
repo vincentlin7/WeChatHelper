@@ -68,7 +68,7 @@ namespace lucky {
 			int64_t SnsObjectDelComment(const std::string& id, uint32_t commentId);
 
 			//CDNœ¬‘ÿ
-			int64_t CDNDownload(const std::string& fileId, const std::string& aeskey, const std::string& md5, const std::string& fileType, const std::string& savePath);
+			int64_t CDNDownload(const std::string& fileId, const std::string& aeskey, const std::string& msgID, const std::string& fileType, const std::string& savePath);
 
 			int64_t GetSelfInfo(common::SelfInfo& out);
 

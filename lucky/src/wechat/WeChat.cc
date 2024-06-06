@@ -481,21 +481,22 @@ namespace lucky {
 
 			
 			cdnDownload.msgIdStr = msgId;
+			OutputDebugString(cdnDownload.msgIdStr.c_str());
 			cdnDownload.fileIdStr = fileId;
 			cdnDownload.aeskeyStr = aeskey;
 			cdnDownload.savePathStr = savePath;
 
-			//*(int32_t*)(a2 + 0xD8) = 2;  //1代表啥 2 3 0x13 (1 原图 2 缩略)
-			*(int32_t*)(a2 + 0xD8) = 1;
+			*(int32_t*)(a2 + 0xD8) = 2;  //1代表啥 2 3 0x13 (1 原图 2 缩略)
+			//*(int32_t*)(a2 + 0xD8) = 1;
 			*(int32_t*)(a2 + 0xDC) = 1;
 			*(int32_t*)(a2 + 0xE0) = 1;
 			*(uint8_t*)(a2 + 0xE4) = 1;
 			*(int32_t*)(a2 + 0x118) = 1;
 			*(int32_t*)(a2 + 0x178) = 1;
-		//	*(int32_t*)(a2 + 0x1A8) = 1;  //0 1 1缩略 0 原图
-			*(int32_t*)(a2 + 0x1A8) = 0;  //0代表啥 
+			*(int32_t*)(a2 + 0x1A8) = 1;  //0 1 1缩略 0 原图
+		//	*(int32_t*)(a2 + 0x1A8) = 0;  //0代表啥 
 			*(int32_t*)(a2 + 0x1E0) = 1;
-			//*(int8_t*)(a2 + 0x331) = 1;
+			*(int8_t*)(a2 + 0x331) = 1;
 			*(int8_t*)(a2 + 0x331) = 0;
 			*(int32_t*)(a2 + 0x334) = 2; //WxAM decoder
 			*(uint64_t*)(a2 + 0x520) = base_ + 0x2726770; //WxAM img decoder
