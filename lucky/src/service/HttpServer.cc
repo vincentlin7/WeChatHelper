@@ -8,6 +8,9 @@ namespace lucky {
 
 		std::wstring GetWStringParam(const std::string data, std::string key) {
 			const char *v =  mg_json_get_str(mg_str(data.c_str()), key.c_str());
+			if (v == NULL) {
+				return  std::wstring();
+			}
 			return utils::Utf8ToWstring(std::string(v));
 		}
 		std::vector<std::wstring> GetArrayParam(const std::string data, std::string key) {
@@ -21,6 +24,9 @@ namespace lucky {
 		}
 		std::string GetStringParam(const std::string data, std::string key) {
 			const char* v = mg_json_get_str(mg_str(data.c_str()), key.c_str());
+			if (v = NULL) {
+				return "";
+			}
 			return v;
 		}
 
