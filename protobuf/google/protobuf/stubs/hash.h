@@ -38,6 +38,7 @@
 #include <string.h>
 #include <google/protobuf/stubs/common.h>
 
+
 #define GOOGLE_PROTOBUF_HAVE_HASH_MAP 1
 #define GOOGLE_PROTOBUF_HAVE_HASH_SET 1
 #define GOOGLE_PROTOBUF_HAVE_64BIT_HASH 1
@@ -104,7 +105,12 @@
 // And.. they are moved back to stdext in MSVC 2013 (haven't checked 2012). That
 // said, use unordered_map for MSVC 2010 and beyond is our safest bet.
 #elif defined(_MSC_VER)
-# if _MSC_VER >= 1600  // Since Visual Studio 2010
+# if _MSC_VER >= 1900  // Since Visual Studio 2022
+#  define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
+#  include <hash_map>
+#  define GOOGLE_PROTOBUF_HAS_CXX11_HASH
+#  define GOOGLE_PROTOBUF_HASH_COMPARE stdext::hash_compare
+# elif _MSC_VER >= 1600  // Since Visual Studio 2010
 #  define GOOGLE_PROTOBUF_HAS_CXX11_HASH
 #  define GOOGLE_PROTOBUF_HASH_COMPARE std::hash_compare
 # elif _MSC_VER >= 1500  // Since Visual Studio 2008
