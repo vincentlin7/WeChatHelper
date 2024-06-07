@@ -72,6 +72,9 @@ namespace lucky {
 
 			int64_t GetSelfInfo(common::SelfInfo& out);
 
+			//wxid转账方 transId 交易ID
+			int64_t TenPayTransferConfirm(const std::wstring& wxid, const std::wstring& transId);
+
 		private:
 			HookPointPtr			initializeProcHookPoint_;
 			std::function<void()>	initializeProc_;

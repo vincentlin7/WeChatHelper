@@ -86,6 +86,9 @@ typedef uint64_t(*__StartupDownloadMedia)(uint64_t , uint64_t , uint64_t , unsig
 
 typedef void(*__JSLogin)(uint64_t , uint64_t);
 
+typedef void(*__TenPayTransferConfirm)(uint64_t);
+
+
 
 
 } // namespace function

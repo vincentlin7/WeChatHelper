@@ -77,6 +77,7 @@ const uint64_t kStartupDownloadMedia = 0x2596780;
 
 const uint64_t kDoAddMsg = 0x23D2B10;
 const uint64_t kJSLogin =  0x27826A0;
+const uint64_t kTenPayTransferConfirm = 0x304C700;
 
 const uint64_t kSceneCenterStartTask = 0x2454F70;					//must do scene after auth
 const uint64_t kMessageLoop = 0x397B400;							//Chrome.MessageLoopProblem (__int64 a1, __int64 a2)

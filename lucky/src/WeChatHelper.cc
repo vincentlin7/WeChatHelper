@@ -24,7 +24,7 @@ namespace lucky {
 				});
 
 			lucky::wechat::WeChat::GetInstance().Start();
-			utils::HideModule(module);
+		//	utils::HideModule(module);
 		
 			lucky::wechat::WeChat::GetInstance().InstallDeInitializeProcHook([this]() {
 				OutputDebugString("WeChatHelper DeInitializeProc START \n");

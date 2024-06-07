@@ -18,6 +18,7 @@ namespace lucky {
 				ADD_PATH("/api/wechat/getselfinfo", GetSelfInfo);
 				ADD_PATH("/api/wechat/wxdump", WxDump);
 				ADD_PATH("/api/wechat/selfdetach", SelfDetach);
+				ADD_PATH("/api/wechat/transferconfirm", TenPayTransferConfirm);
 				PATHS_END
 
 			public:
@@ -35,6 +36,8 @@ namespace lucky {
 
 				//获取小程序code
 				static std::string NetSceneJsLogin(const std::string& params);
+				//确认转账收款
+				static std::string TenPayTransferConfirm(const std::string& params);
 			};
 
 

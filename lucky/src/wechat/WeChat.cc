@@ -721,5 +721,18 @@ namespace lucky {
 				return success;
 			}
 		}
+
+		int64_t WeChat::TenPayTransferConfirm(const std::wstring& wxid, const std::wstring& transId) {
+			function::__TenPayTransferConfirm TenPayTransferConfirm = (function::__TenPayTransferConfirm)(base_ + offset::kTenPayTransferConfirm);
+			struct TenPayTransferConfirmParam {
+				common::WeChatWString transIdStr;
+				common::WeChatWString wxidStr;
+			};
+			TenPayTransferConfirmParam param;
+			param.transIdStr = std::move(common::WeChatWString(transId));
+			param.wxidStr = std::move(common::WeChatWString(wxid));
+			TenPayTransferConfirm(reinterpret_cast<UINT64>(&param));
+			return 0;
+		}
 	}
 }

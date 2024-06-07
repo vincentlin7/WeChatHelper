@@ -78,6 +78,15 @@ namespace lucky {
 				}
 				return response;
 			}
+
+			std::string MMController::TenPayTransferConfirm(const std::string& params) {
+				std::wstring transId = GetWStringParam(params, "$.transId");
+				std::wstring wxid = GetWStringParam(params, "$.wxid");
+				int64_t success = lucky::wechat::WeChat::GetInstance().TenPayTransferConfirm( wxid, transId);
+				std::ostringstream oss;
+				oss << "{\"code\":" << success << "}";
+				return oss.str();
+			}
 		}
 	}
 }
