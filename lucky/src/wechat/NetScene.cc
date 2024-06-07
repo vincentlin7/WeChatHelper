@@ -319,6 +319,28 @@ namespace lucky {
 			return  callback->WaitFor(timeout_);
 		}
 
+		int64_t NetScence::JSLoginRequest(const std::string& waId) {
+			function::__JSLogin JSLogin = (function::__JSLogin)(base_ + offset::kJSLogin);
+			struct JSLoginParam {
+				uint64_t _0x00;
+				std::string waId;
+				int _buf[0x1E] = {0};
+			};
+			JSLoginParam param;
+			param.waId = waId;
+			int32_t* a2 = (int32_t * )&param;
+			a2[0xc] = 1;
+			a2[0x1e] = 1;
+			a2[0xa] = 155;
+			JSLogin(0, reinterpret_cast<UINT64>(&param));
+			return 0;
+		}
+		std::shared_ptr<JSLoginResponse> NetScence::JSLogin(const std::string& waId) {
+			std::shared_ptr<NetSceneCallBack<JSLoginResponse>> callback(new NetSceneCallBack<JSLoginResponse>());
+			CallBackAutoTLS callBackAutoTLS(callback);
+			JSLoginRequest(waId);
+			return  callback->WaitFor(timeout_);
+		}
 
 	}
 	

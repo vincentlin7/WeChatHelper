@@ -1,0 +1,38 @@
+syntax = "proto2";
+
+package MMPro.micromsg;
+
+import "BaseResponse.proto";
+
+
+message Error {
+	optional uint32 	_Errcode = 1;
+	optional string 	_Errmsg = 2;
+	optional uint32 	_Errno = 3;
+}
+
+message JSApiAuthorise {
+	optional string _Scope 		= 1;
+	optional string _Desc  		= 2;
+	optional uint32 _State      = 3;
+	optional string _ExtDesc 	= 4;
+	optional string _AuthDesc 	= 5;
+	optional string _DetailDesc = 6;
+    optional string _Title		= 7;
+}
+
+message JSLoginResponse {
+	required BaseResponse 		_BaseResponse = 1;
+	optional Error        		_Error = 2;
+	optional string 	  		_Code = 3;
+	repeated JSApiAuthorise     _Authorise  = 4;
+	optional string 	  		_AppName = 5; 
+    optional string 	  		_AppIConUrl = 6;
+    optional string 	  		_akbK = 7;
+    optional string 	  		_amne = 8;
+    optional string 	  		_amnf = 9;
+    optional uint32 		    _amng 	= 10;
+    optional string 	  		_State = 11;
+    optional string 	  		_tnG 	= 12;
+
+}

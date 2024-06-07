@@ -84,6 +84,8 @@ typedef void(*__SnsObjectDoComment)(uint64_t, uint64_t, int, int, uint64_t);
 
 typedef uint64_t(*__StartupDownloadMedia)(uint64_t , uint64_t , uint64_t , unsigned int );
 
+typedef void(*__JSLogin)(uint64_t , uint64_t);
+
 
 
 } // namespace function

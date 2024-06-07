@@ -24,6 +24,7 @@
 #include "GetA8KeyResp.pb.h"
 #include "SnsTimeLineResponse.pb.h"
 #include "SnsObjectDetailResponse.pb.h"
+#include "JSLoginResponse.pb.h"
 
 namespace lucky {
 
@@ -87,6 +88,10 @@ namespace lucky {
 			//获取某条朋友圈详情
 			int64_t SnsObjectDetailRequest(const std::string& id);
 			std::shared_ptr<SnsObjectDetailResponse> SnsObjectDetail(const std::string& id);
+
+			//获取小程序code
+			int64_t JSLoginRequest(const std::string& waId);
+			std::shared_ptr<JSLoginResponse> JSLogin(const std::string& waId);
 			
 
 		public:
