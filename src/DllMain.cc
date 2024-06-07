@@ -8,8 +8,8 @@ BOOL APIENTRY DllMain(HMODULE module, DWORD ul_reason_for_call, LPVOID reserved)
   switch (ul_reason_for_call) {
     case DLL_PROCESS_ATTACH: {
         OutputDebugString("DLL_PROCESS_ATTACH START\n"); 
-       // DisableThreadLibraryCalls(module);
-        lucky::WeChatHelper::GetInstance().Init();
+        DisableThreadLibraryCalls(module);
+        lucky::WeChatHelper::GetInstance().Init(module);
         OutputDebugString("DLL_PROCESS_ATTACH  END\n");
       break;
     }
