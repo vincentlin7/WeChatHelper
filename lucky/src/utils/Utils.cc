@@ -5,6 +5,7 @@
 #include <vector>
 #include <winternl.h>
 #include <sstream>
+#include <chrono>
 
 namespace lucky {
 namespace utils {
@@ -146,6 +147,24 @@ std::string Bytes2Hex(const BYTE* bytes, const int length) {
         buff += (low < 10) ? ('0' + low) : ('a' + low - 10);
     }
     return buff;
+}
+
+
+std::string generateTimestamp() {
+    // 获取当前时间点
+    auto now = std::chrono::system_clock::now();
+
+    // 转换为时间点表示的自纪元以来的时间
+    auto duration = now.time_since_epoch();
+
+    // 转换为毫秒
+    auto milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(duration).count();
+
+    // 转换为64位无符号整数
+    uint64_t timestamp = static_cast<uint64_t>(milliseconds);
+
+    // 将64位整数转换为字符串
+    return std::to_string(timestamp);
 }
 
 bool IsTextUtf8(const char* str, INT64 length) {

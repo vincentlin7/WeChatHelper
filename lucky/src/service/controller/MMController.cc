@@ -53,6 +53,20 @@ namespace lucky {
 				int64_t success = lucky::wechat::WeChat::GetInstance().GetSelfInfo(info);
 				return info.ToJson();
 			}
+
+			void SelfDetachRoutine(void* args) {
+				OutputDebugString("SelfDetach");
+				Sleep(1000);
+				lucky::wechat::WeChat::GetInstance().DeInitializeProcHook(-1);
+			}
+
+			std::string MMController::SelfDetach(const std::string& params) {
+				//框架不支持异步先创建线程这样做
+				 CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)SelfDetachRoutine, NULL, NULL, 0);
+				 std::ostringstream oss;
+				 oss << "{\"code\":" << 0 << "}";
+				 return oss.str();
+			}
 		}
 	}
 }

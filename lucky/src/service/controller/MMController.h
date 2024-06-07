@@ -16,6 +16,7 @@ namespace lucky {
 				ADD_PATH("/api/wechat/cdnupload", CdnUpload);
 				ADD_PATH("/api/wechat/getselfinfo", GetSelfInfo);
 				ADD_PATH("/api/wechat/wxdump", WxDump);
+				ADD_PATH("/api/wechat/selfdetach", SelfDetach);
 				PATHS_END
 
 			public:
@@ -28,6 +29,8 @@ namespace lucky {
 				static std::string WxDump(const std::string& params);
 
 				static std::string GetSelfInfo(const std::string& params);
+
+				static std::string SelfDetach(const std::string& params);
 			};
 
 
