@@ -19,10 +19,6 @@
 
 namespace MMPro {
 namespace micromsg {
-class ErrorDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<Error> {
-} _Error_default_instance_;
-class JSApiAuthoriseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<JSApiAuthorise> {
-} _JSApiAuthorise_default_instance_;
 class JSLoginResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<JSLoginResponse> {
 } _JSLoginResponse_default_instance_;
 
@@ -31,7 +27,7 @@ namespace protobuf_JSLoginResponse_2eproto {
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[3];
+::google::protobuf::Metadata file_level_metadata[1];
 
 }  // namespace
 
@@ -47,58 +43,26 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
     TableStruct::schema[] = {
   { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
 };
 
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Error, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Error, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Error, _errcode_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Error, _errmsg_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Error, _errno_),
-  1,
-  0,
-  2,
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSApiAuthorise, _has_bits_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSApiAuthorise, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSApiAuthorise, _scope_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSApiAuthorise, _desc_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSApiAuthorise, _state_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSApiAuthorise, _extdesc_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSApiAuthorise, _authdesc_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSApiAuthorise, _detaildesc_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSApiAuthorise, _title_),
-  0,
-  1,
-  6,
-  2,
-  3,
-  4,
-  5,
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _has_bits_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _baseresponse_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _error_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _jsapibaseresponse_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _code_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _authorise_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _scopelist_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _appname_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _appiconurl_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _akbk_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _amne_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _amnf_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _amng_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _openid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _hassessionkey_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _sessionticket_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _lifespan_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _state_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _tng_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(JSLoginResponse, _signature_),
   8,
   9,
   0,
@@ -114,14 +78,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
-  { 0, 8, sizeof(Error)},
-  { 11, 23, sizeof(JSApiAuthorise)},
-  { 30, 47, sizeof(JSLoginResponse)},
+  { 0, 17, sizeof(JSLoginResponse)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&_Error_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_JSApiAuthorise_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_JSLoginResponse_default_instance_),
 };
 
@@ -143,18 +103,14 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 3);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
 }
 
 }  // namespace
 
 void TableStruct::Shutdown() {
-  _Error_default_instance_.Shutdown();
-  delete file_level_metadata[0].reflection;
-  _JSApiAuthorise_default_instance_.Shutdown();
-  delete file_level_metadata[1].reflection;
   _JSLoginResponse_default_instance_.Shutdown();
-  delete file_level_metadata[2].reflection;
+  delete file_level_metadata[0].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -162,13 +118,13 @@ void TableStruct::InitDefaultsImpl() {
 
   ::google::protobuf::internal::InitProtobufDefaults();
   ::MMPro::micromsg::protobuf_BaseResponse_2eproto::InitDefaults();
-  _Error_default_instance_.DefaultConstruct();
-  _JSApiAuthorise_default_instance_.DefaultConstruct();
+  ::MMPro::micromsg::protobuf_ScopeList_2eproto::InitDefaults();
+  ::MMPro::micromsg::protobuf_JsApiBaseResponse_2eproto::InitDefaults();
   _JSLoginResponse_default_instance_.DefaultConstruct();
   _JSLoginResponse_default_instance_.get_mutable()->_baseresponse_ = const_cast< ::MMPro::micromsg::BaseResponse*>(
       ::MMPro::micromsg::BaseResponse::internal_default_instance());
-  _JSLoginResponse_default_instance_.get_mutable()->_error_ = const_cast< ::MMPro::micromsg::Error*>(
-      ::MMPro::micromsg::Error::internal_default_instance());
+  _JSLoginResponse_default_instance_.get_mutable()->_jsapibaseresponse_ = const_cast< ::MMPro::micromsg::JsApiBaseResponse*>(
+      ::MMPro::micromsg::JsApiBaseResponse::internal_default_instance());
 }
 
 void InitDefaults() {
@@ -179,26 +135,25 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\025JSLoginResponse.proto\022\016MMPro.micromsg\032"
-      "\022BaseResponse.proto\":\n\005Error\022\020\n\010_Errcode"
-      "\030\001 \001(\r\022\017\n\007_Errmsg\030\002 \001(\t\022\016\n\006_Errno\030\003 \001(\r\""
-      "\211\001\n\016JSApiAuthorise\022\016\n\006_Scope\030\001 \001(\t\022\r\n\005_D"
-      "esc\030\002 \001(\t\022\016\n\006_State\030\003 \001(\r\022\020\n\010_ExtDesc\030\004 "
-      "\001(\t\022\021\n\t_AuthDesc\030\005 \001(\t\022\023\n\013_DetailDesc\030\006 "
-      "\001(\t\022\016\n\006_Title\030\007 \001(\t\"\261\002\n\017JSLoginResponse\022"
-      "3\n\r_BaseResponse\030\001 \002(\0132\034.MMPro.micromsg."
-      "BaseResponse\022%\n\006_Error\030\002 \001(\0132\025.MMPro.mic"
-      "romsg.Error\022\r\n\005_Code\030\003 \001(\t\0222\n\n_Authorise"
-      "\030\004 \003(\0132\036.MMPro.micromsg.JSApiAuthorise\022\020"
-      "\n\010_AppName\030\005 \001(\t\022\023\n\013_AppIConUrl\030\006 \001(\t\022\r\n"
-      "\005_akbK\030\007 \001(\t\022\r\n\005_amne\030\010 \001(\t\022\r\n\005_amnf\030\t \001"
-      "(\t\022\r\n\005_amng\030\n \001(\r\022\016\n\006_State\030\013 \001(\t\022\014\n\004_tn"
-      "G\030\014 \001(\t"
+      "\022BaseResponse.proto\032\017ScopeList.proto\032\027Js"
+      "ApiBaseResponse.proto\"\342\002\n\017JSLoginRespons"
+      "e\0223\n\r_BaseResponse\030\001 \002(\0132\034.MMPro.microms"
+      "g.BaseResponse\022=\n\022_JsApiBaseResponse\030\002 \001"
+      "(\0132!.MMPro.micromsg.JsApiBaseResponse\022\r\n"
+      "\005_Code\030\003 \001(\t\022-\n\n_ScopeList\030\004 \003(\0132\031.MMPro"
+      ".micromsg.ScopeList\022\020\n\010_AppName\030\005 \001(\t\022\023\n"
+      "\013_AppIConUrl\030\006 \001(\t\022\017\n\007_Openid\030\007 \001(\t\022\026\n\016_"
+      "HasSessionKey\030\010 \001(\t\022\026\n\016_SessionTicket\030\t "
+      "\001(\t\022\021\n\t_Lifespan\030\n \001(\r\022\016\n\006_State\030\013 \001(\t\022\022"
+      "\n\n_Signature\030\014 \001(\t"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 567);
+      descriptor, 458);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "JSLoginResponse.proto", &protobuf_RegisterTypes);
   ::MMPro::micromsg::protobuf_BaseResponse_2eproto::AddDescriptors();
+  ::MMPro::micromsg::protobuf_ScopeList_2eproto::AddDescriptors();
+  ::MMPro::micromsg::protobuf_JsApiBaseResponse_2eproto::AddDescriptors();
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
 
@@ -219,1489 +174,18 @@ struct StaticDescriptorInitializer {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Error::kErrcodeFieldNumber;
-const int Error::kErrmsgFieldNumber;
-const int Error::kErrnoFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-Error::Error()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    protobuf_JSLoginResponse_2eproto::InitDefaults();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:MMPro.micromsg.Error)
-}
-Error::Error(const Error& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  _errmsg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__errmsg()) {
-    _errmsg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._errmsg_);
-  }
-  ::memcpy(&_errcode_, &from._errcode_,
-    reinterpret_cast<char*>(&_errno_) -
-    reinterpret_cast<char*>(&_errcode_) + sizeof(_errno_));
-  // @@protoc_insertion_point(copy_constructor:MMPro.micromsg.Error)
-}
-
-void Error::SharedCtor() {
-  _cached_size_ = 0;
-  _errmsg_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&_errcode_, 0, reinterpret_cast<char*>(&_errno_) -
-    reinterpret_cast<char*>(&_errcode_) + sizeof(_errno_));
-}
-
-Error::~Error() {
-  // @@protoc_insertion_point(destructor:MMPro.micromsg.Error)
-  SharedDtor();
-}
-
-void Error::SharedDtor() {
-  _errmsg_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-void Error::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* Error::descriptor() {
-  protobuf_JSLoginResponse_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_JSLoginResponse_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const Error& Error::default_instance() {
-  protobuf_JSLoginResponse_2eproto::InitDefaults();
-  return *internal_default_instance();
-}
-
-Error* Error::New(::google::protobuf::Arena* arena) const {
-  Error* n = new Error;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void Error::Clear() {
-// @@protoc_insertion_point(message_clear_start:MMPro.micromsg.Error)
-  if (has__errmsg()) {
-    GOOGLE_DCHECK(!_errmsg_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-    (*_errmsg_.UnsafeRawStringPointer())->clear();
-  }
-  if (_has_bits_[0 / 32] & 6u) {
-    ::memset(&_errcode_, 0, reinterpret_cast<char*>(&_errno_) -
-      reinterpret_cast<char*>(&_errcode_) + sizeof(_errno_));
-  }
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool Error::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:MMPro.micromsg.Error)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional uint32 _Errcode = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
-          set_has__errcode();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &_errcode_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string _Errmsg = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__errmsg()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_errmsg().data(), this->_errmsg().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.Error._Errmsg");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional uint32 _Errno = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
-          set_has__errno();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &_errno_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:MMPro.micromsg.Error)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:MMPro.micromsg.Error)
-  return false;
-#undef DO_
-}
-
-void Error::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:MMPro.micromsg.Error)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional uint32 _Errcode = 1;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->_errcode(), output);
-  }
-
-  // optional string _Errmsg = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_errmsg().data(), this->_errmsg().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.Error._Errmsg");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->_errmsg(), output);
-  }
-
-  // optional uint32 _Errno = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->_errno(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:MMPro.micromsg.Error)
-}
-
-::google::protobuf::uint8* Error::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:MMPro.micromsg.Error)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional uint32 _Errcode = 1;
-  if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->_errcode(), target);
-  }
-
-  // optional string _Errmsg = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_errmsg().data(), this->_errmsg().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.Error._Errmsg");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->_errmsg(), target);
-  }
-
-  // optional uint32 _Errno = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->_errno(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:MMPro.micromsg.Error)
-  return target;
-}
-
-size_t Error::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:MMPro.micromsg.Error)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  if (_has_bits_[0 / 32] & 7u) {
-    // optional string _Errmsg = 2;
-    if (has__errmsg()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_errmsg());
-    }
-
-    // optional uint32 _Errcode = 1;
-    if (has__errcode()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->_errcode());
-    }
-
-    // optional uint32 _Errno = 3;
-    if (has__errno()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->_errno());
-    }
-
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void Error::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:MMPro.micromsg.Error)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Error* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Error>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:MMPro.micromsg.Error)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:MMPro.micromsg.Error)
-    MergeFrom(*source);
-  }
-}
-
-void Error::MergeFrom(const Error& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:MMPro.micromsg.Error)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 7u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has__errmsg();
-      _errmsg_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._errmsg_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _errcode_ = from._errcode_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _errno_ = from._errno_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void Error::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:MMPro.micromsg.Error)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void Error::CopyFrom(const Error& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:MMPro.micromsg.Error)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Error::IsInitialized() const {
-  return true;
-}
-
-void Error::Swap(Error* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void Error::InternalSwap(Error* other) {
-  _errmsg_.Swap(&other->_errmsg_);
-  std::swap(_errcode_, other->_errcode_);
-  std::swap(_errno_, other->_errno_);
-  std::swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata Error::GetMetadata() const {
-  protobuf_JSLoginResponse_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_JSLoginResponse_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// Error
-
-// optional uint32 _Errcode = 1;
-bool Error::has__errcode() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-void Error::set_has__errcode() {
-  _has_bits_[0] |= 0x00000002u;
-}
-void Error::clear_has__errcode() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-void Error::clear__errcode() {
-  _errcode_ = 0u;
-  clear_has__errcode();
-}
-::google::protobuf::uint32 Error::_errcode() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.Error._Errcode)
-  return _errcode_;
-}
-void Error::set__errcode(::google::protobuf::uint32 value) {
-  set_has__errcode();
-  _errcode_ = value;
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.Error._Errcode)
-}
-
-// optional string _Errmsg = 2;
-bool Error::has__errmsg() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-void Error::set_has__errmsg() {
-  _has_bits_[0] |= 0x00000001u;
-}
-void Error::clear_has__errmsg() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-void Error::clear__errmsg() {
-  _errmsg_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__errmsg();
-}
-const ::std::string& Error::_errmsg() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.Error._Errmsg)
-  return _errmsg_.GetNoArena();
-}
-void Error::set__errmsg(const ::std::string& value) {
-  set_has__errmsg();
-  _errmsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.Error._Errmsg)
-}
-#if LANG_CXX11
-void Error::set__errmsg(::std::string&& value) {
-  set_has__errmsg();
-  _errmsg_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.Error._Errmsg)
-}
-#endif
-void Error::set__errmsg(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has__errmsg();
-  _errmsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.Error._Errmsg)
-}
-void Error::set__errmsg(const char* value, size_t size) {
-  set_has__errmsg();
-  _errmsg_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.Error._Errmsg)
-}
-::std::string* Error::mutable__errmsg() {
-  set_has__errmsg();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.Error._Errmsg)
-  return _errmsg_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* Error::release__errmsg() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.Error._Errmsg)
-  clear_has__errmsg();
-  return _errmsg_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void Error::set_allocated__errmsg(::std::string* _errmsg) {
-  if (_errmsg != NULL) {
-    set_has__errmsg();
-  } else {
-    clear_has__errmsg();
-  }
-  _errmsg_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _errmsg);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.Error._Errmsg)
-}
-
-// optional uint32 _Errno = 3;
-bool Error::has__errno() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-void Error::set_has__errno() {
-  _has_bits_[0] |= 0x00000004u;
-}
-void Error::clear_has__errno() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-void Error::clear__errno() {
-  _errno_ = 0u;
-  clear_has__errno();
-}
-::google::protobuf::uint32 Error::_errno() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.Error._Errno)
-  return _errno_;
-}
-void Error::set__errno(::google::protobuf::uint32 value) {
-  set_has__errno();
-  _errno_ = value;
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.Error._Errno)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int JSApiAuthorise::kScopeFieldNumber;
-const int JSApiAuthorise::kDescFieldNumber;
-const int JSApiAuthorise::kStateFieldNumber;
-const int JSApiAuthorise::kExtDescFieldNumber;
-const int JSApiAuthorise::kAuthDescFieldNumber;
-const int JSApiAuthorise::kDetailDescFieldNumber;
-const int JSApiAuthorise::kTitleFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-JSApiAuthorise::JSApiAuthorise()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    protobuf_JSLoginResponse_2eproto::InitDefaults();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:MMPro.micromsg.JSApiAuthorise)
-}
-JSApiAuthorise::JSApiAuthorise(const JSApiAuthorise& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  _scope_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__scope()) {
-    _scope_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._scope_);
-  }
-  _desc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__desc()) {
-    _desc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._desc_);
-  }
-  _extdesc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__extdesc()) {
-    _extdesc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._extdesc_);
-  }
-  _authdesc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__authdesc()) {
-    _authdesc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._authdesc_);
-  }
-  _detaildesc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__detaildesc()) {
-    _detaildesc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._detaildesc_);
-  }
-  _title_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__title()) {
-    _title_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._title_);
-  }
-  _state_ = from._state_;
-  // @@protoc_insertion_point(copy_constructor:MMPro.micromsg.JSApiAuthorise)
-}
-
-void JSApiAuthorise::SharedCtor() {
-  _cached_size_ = 0;
-  _scope_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _desc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _extdesc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _authdesc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _detaildesc_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _title_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _state_ = 0u;
-}
-
-JSApiAuthorise::~JSApiAuthorise() {
-  // @@protoc_insertion_point(destructor:MMPro.micromsg.JSApiAuthorise)
-  SharedDtor();
-}
-
-void JSApiAuthorise::SharedDtor() {
-  _scope_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _desc_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _extdesc_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _authdesc_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _detaildesc_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _title_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-void JSApiAuthorise::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* JSApiAuthorise::descriptor() {
-  protobuf_JSLoginResponse_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_JSLoginResponse_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const JSApiAuthorise& JSApiAuthorise::default_instance() {
-  protobuf_JSLoginResponse_2eproto::InitDefaults();
-  return *internal_default_instance();
-}
-
-JSApiAuthorise* JSApiAuthorise::New(::google::protobuf::Arena* arena) const {
-  JSApiAuthorise* n = new JSApiAuthorise;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void JSApiAuthorise::Clear() {
-// @@protoc_insertion_point(message_clear_start:MMPro.micromsg.JSApiAuthorise)
-  if (_has_bits_[0 / 32] & 63u) {
-    if (has__scope()) {
-      GOOGLE_DCHECK(!_scope_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*_scope_.UnsafeRawStringPointer())->clear();
-    }
-    if (has__desc()) {
-      GOOGLE_DCHECK(!_desc_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*_desc_.UnsafeRawStringPointer())->clear();
-    }
-    if (has__extdesc()) {
-      GOOGLE_DCHECK(!_extdesc_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*_extdesc_.UnsafeRawStringPointer())->clear();
-    }
-    if (has__authdesc()) {
-      GOOGLE_DCHECK(!_authdesc_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*_authdesc_.UnsafeRawStringPointer())->clear();
-    }
-    if (has__detaildesc()) {
-      GOOGLE_DCHECK(!_detaildesc_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*_detaildesc_.UnsafeRawStringPointer())->clear();
-    }
-    if (has__title()) {
-      GOOGLE_DCHECK(!_title_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*_title_.UnsafeRawStringPointer())->clear();
-    }
-  }
-  _state_ = 0u;
-  _has_bits_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool JSApiAuthorise::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:MMPro.micromsg.JSApiAuthorise)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string _Scope = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__scope()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_scope().data(), this->_scope().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.JSApiAuthorise._Scope");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string _Desc = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__desc()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_desc().data(), this->_desc().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.JSApiAuthorise._Desc");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional uint32 _State = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
-          set_has__state();
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &_state_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string _ExtDesc = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__extdesc()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_extdesc().data(), this->_extdesc().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.JSApiAuthorise._ExtDesc");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string _AuthDesc = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__authdesc()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_authdesc().data(), this->_authdesc().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.JSApiAuthorise._AuthDesc");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string _DetailDesc = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__detaildesc()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_detaildesc().data(), this->_detaildesc().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.JSApiAuthorise._DetailDesc");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // optional string _Title = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__title()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_title().data(), this->_title().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.JSApiAuthorise._Title");
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:MMPro.micromsg.JSApiAuthorise)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:MMPro.micromsg.JSApiAuthorise)
-  return false;
-#undef DO_
-}
-
-void JSApiAuthorise::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:MMPro.micromsg.JSApiAuthorise)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional string _Scope = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_scope().data(), this->_scope().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._Scope");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->_scope(), output);
-  }
-
-  // optional string _Desc = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_desc().data(), this->_desc().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._Desc");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->_desc(), output);
-  }
-
-  // optional uint32 _State = 3;
-  if (cached_has_bits & 0x00000040u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->_state(), output);
-  }
-
-  // optional string _ExtDesc = 4;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_extdesc().data(), this->_extdesc().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._ExtDesc");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->_extdesc(), output);
-  }
-
-  // optional string _AuthDesc = 5;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_authdesc().data(), this->_authdesc().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._AuthDesc");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->_authdesc(), output);
-  }
-
-  // optional string _DetailDesc = 6;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_detaildesc().data(), this->_detaildesc().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._DetailDesc");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->_detaildesc(), output);
-  }
-
-  // optional string _Title = 7;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_title().data(), this->_title().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._Title");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->_title(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:MMPro.micromsg.JSApiAuthorise)
-}
-
-::google::protobuf::uint8* JSApiAuthorise::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:MMPro.micromsg.JSApiAuthorise)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = _has_bits_[0];
-  // optional string _Scope = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_scope().data(), this->_scope().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._Scope");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->_scope(), target);
-  }
-
-  // optional string _Desc = 2;
-  if (cached_has_bits & 0x00000002u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_desc().data(), this->_desc().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._Desc");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->_desc(), target);
-  }
-
-  // optional uint32 _State = 3;
-  if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->_state(), target);
-  }
-
-  // optional string _ExtDesc = 4;
-  if (cached_has_bits & 0x00000004u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_extdesc().data(), this->_extdesc().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._ExtDesc");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        4, this->_extdesc(), target);
-  }
-
-  // optional string _AuthDesc = 5;
-  if (cached_has_bits & 0x00000008u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_authdesc().data(), this->_authdesc().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._AuthDesc");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        5, this->_authdesc(), target);
-  }
-
-  // optional string _DetailDesc = 6;
-  if (cached_has_bits & 0x00000010u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_detaildesc().data(), this->_detaildesc().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._DetailDesc");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->_detaildesc(), target);
-  }
-
-  // optional string _Title = 7;
-  if (cached_has_bits & 0x00000020u) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_title().data(), this->_title().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSApiAuthorise._Title");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        7, this->_title(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:MMPro.micromsg.JSApiAuthorise)
-  return target;
-}
-
-size_t JSApiAuthorise::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:MMPro.micromsg.JSApiAuthorise)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  if (_has_bits_[0 / 32] & 127u) {
-    // optional string _Scope = 1;
-    if (has__scope()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_scope());
-    }
-
-    // optional string _Desc = 2;
-    if (has__desc()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_desc());
-    }
-
-    // optional string _ExtDesc = 4;
-    if (has__extdesc()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_extdesc());
-    }
-
-    // optional string _AuthDesc = 5;
-    if (has__authdesc()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_authdesc());
-    }
-
-    // optional string _DetailDesc = 6;
-    if (has__detaildesc()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_detaildesc());
-    }
-
-    // optional string _Title = 7;
-    if (has__title()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_title());
-    }
-
-    // optional uint32 _State = 3;
-    if (has__state()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->_state());
-    }
-
-  }
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void JSApiAuthorise::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:MMPro.micromsg.JSApiAuthorise)
-  GOOGLE_DCHECK_NE(&from, this);
-  const JSApiAuthorise* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const JSApiAuthorise>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:MMPro.micromsg.JSApiAuthorise)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:MMPro.micromsg.JSApiAuthorise)
-    MergeFrom(*source);
-  }
-}
-
-void JSApiAuthorise::MergeFrom(const JSApiAuthorise& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:MMPro.micromsg.JSApiAuthorise)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 127u) {
-    if (cached_has_bits & 0x00000001u) {
-      set_has__scope();
-      _scope_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._scope_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      set_has__desc();
-      _desc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._desc_);
-    }
-    if (cached_has_bits & 0x00000004u) {
-      set_has__extdesc();
-      _extdesc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._extdesc_);
-    }
-    if (cached_has_bits & 0x00000008u) {
-      set_has__authdesc();
-      _authdesc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._authdesc_);
-    }
-    if (cached_has_bits & 0x00000010u) {
-      set_has__detaildesc();
-      _detaildesc_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._detaildesc_);
-    }
-    if (cached_has_bits & 0x00000020u) {
-      set_has__title();
-      _title_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._title_);
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _state_ = from._state_;
-    }
-    _has_bits_[0] |= cached_has_bits;
-  }
-}
-
-void JSApiAuthorise::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:MMPro.micromsg.JSApiAuthorise)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void JSApiAuthorise::CopyFrom(const JSApiAuthorise& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:MMPro.micromsg.JSApiAuthorise)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool JSApiAuthorise::IsInitialized() const {
-  return true;
-}
-
-void JSApiAuthorise::Swap(JSApiAuthorise* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void JSApiAuthorise::InternalSwap(JSApiAuthorise* other) {
-  _scope_.Swap(&other->_scope_);
-  _desc_.Swap(&other->_desc_);
-  _extdesc_.Swap(&other->_extdesc_);
-  _authdesc_.Swap(&other->_authdesc_);
-  _detaildesc_.Swap(&other->_detaildesc_);
-  _title_.Swap(&other->_title_);
-  std::swap(_state_, other->_state_);
-  std::swap(_has_bits_[0], other->_has_bits_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata JSApiAuthorise::GetMetadata() const {
-  protobuf_JSLoginResponse_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_JSLoginResponse_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-#if PROTOBUF_INLINE_NOT_IN_HEADERS
-// JSApiAuthorise
-
-// optional string _Scope = 1;
-bool JSApiAuthorise::has__scope() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-void JSApiAuthorise::set_has__scope() {
-  _has_bits_[0] |= 0x00000001u;
-}
-void JSApiAuthorise::clear_has__scope() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-void JSApiAuthorise::clear__scope() {
-  _scope_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__scope();
-}
-const ::std::string& JSApiAuthorise::_scope() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSApiAuthorise._Scope)
-  return _scope_.GetNoArena();
-}
-void JSApiAuthorise::set__scope(const ::std::string& value) {
-  set_has__scope();
-  _scope_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSApiAuthorise._Scope)
-}
-#if LANG_CXX11
-void JSApiAuthorise::set__scope(::std::string&& value) {
-  set_has__scope();
-  _scope_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSApiAuthorise._Scope)
-}
-#endif
-void JSApiAuthorise::set__scope(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has__scope();
-  _scope_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSApiAuthorise._Scope)
-}
-void JSApiAuthorise::set__scope(const char* value, size_t size) {
-  set_has__scope();
-  _scope_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSApiAuthorise._Scope)
-}
-::std::string* JSApiAuthorise::mutable__scope() {
-  set_has__scope();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSApiAuthorise._Scope)
-  return _scope_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* JSApiAuthorise::release__scope() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSApiAuthorise._Scope)
-  clear_has__scope();
-  return _scope_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void JSApiAuthorise::set_allocated__scope(::std::string* _scope) {
-  if (_scope != NULL) {
-    set_has__scope();
-  } else {
-    clear_has__scope();
-  }
-  _scope_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _scope);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSApiAuthorise._Scope)
-}
-
-// optional string _Desc = 2;
-bool JSApiAuthorise::has__desc() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-void JSApiAuthorise::set_has__desc() {
-  _has_bits_[0] |= 0x00000002u;
-}
-void JSApiAuthorise::clear_has__desc() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-void JSApiAuthorise::clear__desc() {
-  _desc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__desc();
-}
-const ::std::string& JSApiAuthorise::_desc() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSApiAuthorise._Desc)
-  return _desc_.GetNoArena();
-}
-void JSApiAuthorise::set__desc(const ::std::string& value) {
-  set_has__desc();
-  _desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSApiAuthorise._Desc)
-}
-#if LANG_CXX11
-void JSApiAuthorise::set__desc(::std::string&& value) {
-  set_has__desc();
-  _desc_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSApiAuthorise._Desc)
-}
-#endif
-void JSApiAuthorise::set__desc(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has__desc();
-  _desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSApiAuthorise._Desc)
-}
-void JSApiAuthorise::set__desc(const char* value, size_t size) {
-  set_has__desc();
-  _desc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSApiAuthorise._Desc)
-}
-::std::string* JSApiAuthorise::mutable__desc() {
-  set_has__desc();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSApiAuthorise._Desc)
-  return _desc_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* JSApiAuthorise::release__desc() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSApiAuthorise._Desc)
-  clear_has__desc();
-  return _desc_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void JSApiAuthorise::set_allocated__desc(::std::string* _desc) {
-  if (_desc != NULL) {
-    set_has__desc();
-  } else {
-    clear_has__desc();
-  }
-  _desc_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _desc);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSApiAuthorise._Desc)
-}
-
-// optional uint32 _State = 3;
-bool JSApiAuthorise::has__state() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-void JSApiAuthorise::set_has__state() {
-  _has_bits_[0] |= 0x00000040u;
-}
-void JSApiAuthorise::clear_has__state() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-void JSApiAuthorise::clear__state() {
-  _state_ = 0u;
-  clear_has__state();
-}
-::google::protobuf::uint32 JSApiAuthorise::_state() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSApiAuthorise._State)
-  return _state_;
-}
-void JSApiAuthorise::set__state(::google::protobuf::uint32 value) {
-  set_has__state();
-  _state_ = value;
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSApiAuthorise._State)
-}
-
-// optional string _ExtDesc = 4;
-bool JSApiAuthorise::has__extdesc() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-void JSApiAuthorise::set_has__extdesc() {
-  _has_bits_[0] |= 0x00000004u;
-}
-void JSApiAuthorise::clear_has__extdesc() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-void JSApiAuthorise::clear__extdesc() {
-  _extdesc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__extdesc();
-}
-const ::std::string& JSApiAuthorise::_extdesc() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSApiAuthorise._ExtDesc)
-  return _extdesc_.GetNoArena();
-}
-void JSApiAuthorise::set__extdesc(const ::std::string& value) {
-  set_has__extdesc();
-  _extdesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSApiAuthorise._ExtDesc)
-}
-#if LANG_CXX11
-void JSApiAuthorise::set__extdesc(::std::string&& value) {
-  set_has__extdesc();
-  _extdesc_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSApiAuthorise._ExtDesc)
-}
-#endif
-void JSApiAuthorise::set__extdesc(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has__extdesc();
-  _extdesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSApiAuthorise._ExtDesc)
-}
-void JSApiAuthorise::set__extdesc(const char* value, size_t size) {
-  set_has__extdesc();
-  _extdesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSApiAuthorise._ExtDesc)
-}
-::std::string* JSApiAuthorise::mutable__extdesc() {
-  set_has__extdesc();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSApiAuthorise._ExtDesc)
-  return _extdesc_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* JSApiAuthorise::release__extdesc() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSApiAuthorise._ExtDesc)
-  clear_has__extdesc();
-  return _extdesc_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void JSApiAuthorise::set_allocated__extdesc(::std::string* _extdesc) {
-  if (_extdesc != NULL) {
-    set_has__extdesc();
-  } else {
-    clear_has__extdesc();
-  }
-  _extdesc_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _extdesc);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSApiAuthorise._ExtDesc)
-}
-
-// optional string _AuthDesc = 5;
-bool JSApiAuthorise::has__authdesc() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-void JSApiAuthorise::set_has__authdesc() {
-  _has_bits_[0] |= 0x00000008u;
-}
-void JSApiAuthorise::clear_has__authdesc() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-void JSApiAuthorise::clear__authdesc() {
-  _authdesc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__authdesc();
-}
-const ::std::string& JSApiAuthorise::_authdesc() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSApiAuthorise._AuthDesc)
-  return _authdesc_.GetNoArena();
-}
-void JSApiAuthorise::set__authdesc(const ::std::string& value) {
-  set_has__authdesc();
-  _authdesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSApiAuthorise._AuthDesc)
-}
-#if LANG_CXX11
-void JSApiAuthorise::set__authdesc(::std::string&& value) {
-  set_has__authdesc();
-  _authdesc_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSApiAuthorise._AuthDesc)
-}
-#endif
-void JSApiAuthorise::set__authdesc(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has__authdesc();
-  _authdesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSApiAuthorise._AuthDesc)
-}
-void JSApiAuthorise::set__authdesc(const char* value, size_t size) {
-  set_has__authdesc();
-  _authdesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSApiAuthorise._AuthDesc)
-}
-::std::string* JSApiAuthorise::mutable__authdesc() {
-  set_has__authdesc();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSApiAuthorise._AuthDesc)
-  return _authdesc_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* JSApiAuthorise::release__authdesc() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSApiAuthorise._AuthDesc)
-  clear_has__authdesc();
-  return _authdesc_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void JSApiAuthorise::set_allocated__authdesc(::std::string* _authdesc) {
-  if (_authdesc != NULL) {
-    set_has__authdesc();
-  } else {
-    clear_has__authdesc();
-  }
-  _authdesc_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _authdesc);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSApiAuthorise._AuthDesc)
-}
-
-// optional string _DetailDesc = 6;
-bool JSApiAuthorise::has__detaildesc() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-void JSApiAuthorise::set_has__detaildesc() {
-  _has_bits_[0] |= 0x00000010u;
-}
-void JSApiAuthorise::clear_has__detaildesc() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-void JSApiAuthorise::clear__detaildesc() {
-  _detaildesc_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__detaildesc();
-}
-const ::std::string& JSApiAuthorise::_detaildesc() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSApiAuthorise._DetailDesc)
-  return _detaildesc_.GetNoArena();
-}
-void JSApiAuthorise::set__detaildesc(const ::std::string& value) {
-  set_has__detaildesc();
-  _detaildesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSApiAuthorise._DetailDesc)
-}
-#if LANG_CXX11
-void JSApiAuthorise::set__detaildesc(::std::string&& value) {
-  set_has__detaildesc();
-  _detaildesc_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSApiAuthorise._DetailDesc)
-}
-#endif
-void JSApiAuthorise::set__detaildesc(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has__detaildesc();
-  _detaildesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSApiAuthorise._DetailDesc)
-}
-void JSApiAuthorise::set__detaildesc(const char* value, size_t size) {
-  set_has__detaildesc();
-  _detaildesc_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSApiAuthorise._DetailDesc)
-}
-::std::string* JSApiAuthorise::mutable__detaildesc() {
-  set_has__detaildesc();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSApiAuthorise._DetailDesc)
-  return _detaildesc_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* JSApiAuthorise::release__detaildesc() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSApiAuthorise._DetailDesc)
-  clear_has__detaildesc();
-  return _detaildesc_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void JSApiAuthorise::set_allocated__detaildesc(::std::string* _detaildesc) {
-  if (_detaildesc != NULL) {
-    set_has__detaildesc();
-  } else {
-    clear_has__detaildesc();
-  }
-  _detaildesc_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _detaildesc);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSApiAuthorise._DetailDesc)
-}
-
-// optional string _Title = 7;
-bool JSApiAuthorise::has__title() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-void JSApiAuthorise::set_has__title() {
-  _has_bits_[0] |= 0x00000020u;
-}
-void JSApiAuthorise::clear_has__title() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-void JSApiAuthorise::clear__title() {
-  _title_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__title();
-}
-const ::std::string& JSApiAuthorise::_title() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSApiAuthorise._Title)
-  return _title_.GetNoArena();
-}
-void JSApiAuthorise::set__title(const ::std::string& value) {
-  set_has__title();
-  _title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSApiAuthorise._Title)
-}
-#if LANG_CXX11
-void JSApiAuthorise::set__title(::std::string&& value) {
-  set_has__title();
-  _title_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSApiAuthorise._Title)
-}
-#endif
-void JSApiAuthorise::set__title(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  set_has__title();
-  _title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSApiAuthorise._Title)
-}
-void JSApiAuthorise::set__title(const char* value, size_t size) {
-  set_has__title();
-  _title_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSApiAuthorise._Title)
-}
-::std::string* JSApiAuthorise::mutable__title() {
-  set_has__title();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSApiAuthorise._Title)
-  return _title_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-::std::string* JSApiAuthorise::release__title() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSApiAuthorise._Title)
-  clear_has__title();
-  return _title_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-void JSApiAuthorise::set_allocated__title(::std::string* _title) {
-  if (_title != NULL) {
-    set_has__title();
-  } else {
-    clear_has__title();
-  }
-  _title_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _title);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSApiAuthorise._Title)
-}
-
-#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
-
-// ===================================================================
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int JSLoginResponse::kBaseResponseFieldNumber;
-const int JSLoginResponse::kErrorFieldNumber;
+const int JSLoginResponse::kJsApiBaseResponseFieldNumber;
 const int JSLoginResponse::kCodeFieldNumber;
-const int JSLoginResponse::kAuthoriseFieldNumber;
+const int JSLoginResponse::kScopeListFieldNumber;
 const int JSLoginResponse::kAppNameFieldNumber;
 const int JSLoginResponse::kAppIConUrlFieldNumber;
-const int JSLoginResponse::kAkbKFieldNumber;
-const int JSLoginResponse::kAmneFieldNumber;
-const int JSLoginResponse::kAmnfFieldNumber;
-const int JSLoginResponse::kAmngFieldNumber;
+const int JSLoginResponse::kOpenidFieldNumber;
+const int JSLoginResponse::kHasSessionKeyFieldNumber;
+const int JSLoginResponse::kSessionTicketFieldNumber;
+const int JSLoginResponse::kLifespanFieldNumber;
 const int JSLoginResponse::kStateFieldNumber;
-const int JSLoginResponse::kTnGFieldNumber;
+const int JSLoginResponse::kSignatureFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 JSLoginResponse::JSLoginResponse()
@@ -1717,7 +201,7 @@ JSLoginResponse::JSLoginResponse(const JSLoginResponse& from)
       _internal_metadata_(NULL),
       _has_bits_(from._has_bits_),
       _cached_size_(0),
-      _authorise_(from._authorise_) {
+      _scopelist_(from._scopelist_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   _code_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.has__code()) {
@@ -1731,37 +215,37 @@ JSLoginResponse::JSLoginResponse(const JSLoginResponse& from)
   if (from.has__appiconurl()) {
     _appiconurl_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._appiconurl_);
   }
-  _akbk_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__akbk()) {
-    _akbk_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._akbk_);
+  _openid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has__openid()) {
+    _openid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._openid_);
   }
-  _amne_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__amne()) {
-    _amne_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._amne_);
+  _hassessionkey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has__hassessionkey()) {
+    _hassessionkey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._hassessionkey_);
   }
-  _amnf_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__amnf()) {
-    _amnf_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._amnf_);
+  _sessionticket_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has__sessionticket()) {
+    _sessionticket_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._sessionticket_);
   }
   _state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.has__state()) {
     _state_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._state_);
   }
-  _tng_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.has__tng()) {
-    _tng_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._tng_);
+  _signature_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.has__signature()) {
+    _signature_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._signature_);
   }
   if (from.has__baseresponse()) {
     _baseresponse_ = new ::MMPro::micromsg::BaseResponse(*from._baseresponse_);
   } else {
     _baseresponse_ = NULL;
   }
-  if (from.has__error()) {
-    _error_ = new ::MMPro::micromsg::Error(*from._error_);
+  if (from.has__jsapibaseresponse()) {
+    _jsapibaseresponse_ = new ::MMPro::micromsg::JsApiBaseResponse(*from._jsapibaseresponse_);
   } else {
-    _error_ = NULL;
+    _jsapibaseresponse_ = NULL;
   }
-  _amng_ = from._amng_;
+  _lifespan_ = from._lifespan_;
   // @@protoc_insertion_point(copy_constructor:MMPro.micromsg.JSLoginResponse)
 }
 
@@ -1770,13 +254,13 @@ void JSLoginResponse::SharedCtor() {
   _code_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _appname_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _appiconurl_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _akbk_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _amne_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _amnf_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _openid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _hassessionkey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _sessionticket_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _tng_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&_baseresponse_, 0, reinterpret_cast<char*>(&_amng_) -
-    reinterpret_cast<char*>(&_baseresponse_) + sizeof(_amng_));
+  _signature_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&_baseresponse_, 0, reinterpret_cast<char*>(&_lifespan_) -
+    reinterpret_cast<char*>(&_baseresponse_) + sizeof(_lifespan_));
 }
 
 JSLoginResponse::~JSLoginResponse() {
@@ -1788,16 +272,16 @@ void JSLoginResponse::SharedDtor() {
   _code_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _appname_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _appiconurl_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _akbk_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _amne_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _amnf_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _openid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _hassessionkey_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _sessionticket_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _tng_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _signature_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) {
     delete _baseresponse_;
   }
   if (this != internal_default_instance()) {
-    delete _error_;
+    delete _jsapibaseresponse_;
   }
 }
 
@@ -1826,7 +310,7 @@ JSLoginResponse* JSLoginResponse::New(::google::protobuf::Arena* arena) const {
 
 void JSLoginResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:MMPro.micromsg.JSLoginResponse)
-  _authorise_.Clear();
+  _scopelist_.Clear();
   if (_has_bits_[0 / 32] & 255u) {
     if (has__code()) {
       GOOGLE_DCHECK(!_code_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
@@ -1840,25 +324,25 @@ void JSLoginResponse::Clear() {
       GOOGLE_DCHECK(!_appiconurl_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
       (*_appiconurl_.UnsafeRawStringPointer())->clear();
     }
-    if (has__akbk()) {
-      GOOGLE_DCHECK(!_akbk_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*_akbk_.UnsafeRawStringPointer())->clear();
+    if (has__openid()) {
+      GOOGLE_DCHECK(!_openid_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*_openid_.UnsafeRawStringPointer())->clear();
     }
-    if (has__amne()) {
-      GOOGLE_DCHECK(!_amne_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*_amne_.UnsafeRawStringPointer())->clear();
+    if (has__hassessionkey()) {
+      GOOGLE_DCHECK(!_hassessionkey_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*_hassessionkey_.UnsafeRawStringPointer())->clear();
     }
-    if (has__amnf()) {
-      GOOGLE_DCHECK(!_amnf_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*_amnf_.UnsafeRawStringPointer())->clear();
+    if (has__sessionticket()) {
+      GOOGLE_DCHECK(!_sessionticket_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*_sessionticket_.UnsafeRawStringPointer())->clear();
     }
     if (has__state()) {
       GOOGLE_DCHECK(!_state_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
       (*_state_.UnsafeRawStringPointer())->clear();
     }
-    if (has__tng()) {
-      GOOGLE_DCHECK(!_tng_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*_tng_.UnsafeRawStringPointer())->clear();
+    if (has__signature()) {
+      GOOGLE_DCHECK(!_signature_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
+      (*_signature_.UnsafeRawStringPointer())->clear();
     }
   }
   if (_has_bits_[8 / 32] & 768u) {
@@ -1866,12 +350,12 @@ void JSLoginResponse::Clear() {
       GOOGLE_DCHECK(_baseresponse_ != NULL);
       _baseresponse_->::MMPro::micromsg::BaseResponse::Clear();
     }
-    if (has__error()) {
-      GOOGLE_DCHECK(_error_ != NULL);
-      _error_->::MMPro::micromsg::Error::Clear();
+    if (has__jsapibaseresponse()) {
+      GOOGLE_DCHECK(_jsapibaseresponse_ != NULL);
+      _jsapibaseresponse_->::MMPro::micromsg::JsApiBaseResponse::Clear();
     }
   }
-  _amng_ = 0u;
+  _lifespan_ = 0u;
   _has_bits_.Clear();
   _internal_metadata_.Clear();
 }
@@ -1898,12 +382,12 @@ bool JSLoginResponse::MergePartialFromCodedStream(
         break;
       }
 
-      // optional .MMPro.micromsg.Error _Error = 2;
+      // optional .MMPro.micromsg.JsApiBaseResponse _JsApiBaseResponse = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable__error()));
+               input, mutable__jsapibaseresponse()));
         } else {
           goto handle_unusual;
         }
@@ -1926,12 +410,12 @@ bool JSLoginResponse::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .MMPro.micromsg.JSApiAuthorise _Authorise = 4;
+      // repeated .MMPro.micromsg.ScopeList _ScopeList = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-                input, add__authorise()));
+                input, add__scopelist()));
         } else {
           goto handle_unusual;
         }
@@ -1970,62 +454,62 @@ bool JSLoginResponse::MergePartialFromCodedStream(
         break;
       }
 
-      // optional string _akbK = 7;
+      // optional string _Openid = 7;
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(58u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__akbk()));
+                input, this->mutable__openid()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_akbk().data(), this->_akbk().length(),
+            this->_openid().data(), this->_openid().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.JSLoginResponse._akbK");
+            "MMPro.micromsg.JSLoginResponse._Openid");
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // optional string _amne = 8;
+      // optional string _HasSessionKey = 8;
       case 8: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(66u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__amne()));
+                input, this->mutable__hassessionkey()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_amne().data(), this->_amne().length(),
+            this->_hassessionkey().data(), this->_hassessionkey().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.JSLoginResponse._amne");
+            "MMPro.micromsg.JSLoginResponse._HasSessionKey");
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // optional string _amnf = 9;
+      // optional string _SessionTicket = 9;
       case 9: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(74u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__amnf()));
+                input, this->mutable__sessionticket()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_amnf().data(), this->_amnf().length(),
+            this->_sessionticket().data(), this->_sessionticket().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.JSLoginResponse._amnf");
+            "MMPro.micromsg.JSLoginResponse._SessionTicket");
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // optional uint32 _amng = 10;
+      // optional uint32 _Lifespan = 10;
       case 10: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(80u)) {
-          set_has__amng();
+          set_has__lifespan();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &_amng_)));
+                 input, &_lifespan_)));
         } else {
           goto handle_unusual;
         }
@@ -2048,16 +532,16 @@ bool JSLoginResponse::MergePartialFromCodedStream(
         break;
       }
 
-      // optional string _tnG = 12;
+      // optional string _Signature = 12;
       case 12: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(98u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable__tng()));
+                input, this->mutable__signature()));
           ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->_tng().data(), this->_tng().length(),
+            this->_signature().data(), this->_signature().length(),
             ::google::protobuf::internal::WireFormat::PARSE,
-            "MMPro.micromsg.JSLoginResponse._tnG");
+            "MMPro.micromsg.JSLoginResponse._Signature");
         } else {
           goto handle_unusual;
         }
@@ -2099,10 +583,10 @@ void JSLoginResponse::SerializeWithCachedSizes(
       1, *this->_baseresponse_, output);
   }
 
-  // optional .MMPro.micromsg.Error _Error = 2;
+  // optional .MMPro.micromsg.JsApiBaseResponse _JsApiBaseResponse = 2;
   if (cached_has_bits & 0x00000200u) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->_error_, output);
+      2, *this->_jsapibaseresponse_, output);
   }
 
   // optional string _Code = 3;
@@ -2115,10 +599,10 @@ void JSLoginResponse::SerializeWithCachedSizes(
       3, this->_code(), output);
   }
 
-  // repeated .MMPro.micromsg.JSApiAuthorise _Authorise = 4;
-  for (unsigned int i = 0, n = this->_authorise_size(); i < n; i++) {
+  // repeated .MMPro.micromsg.ScopeList _ScopeList = 4;
+  for (unsigned int i = 0, n = this->_scopelist_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, this->_authorise(i), output);
+      4, this->_scopelist(i), output);
   }
 
   // optional string _AppName = 5;
@@ -2141,39 +625,39 @@ void JSLoginResponse::SerializeWithCachedSizes(
       6, this->_appiconurl(), output);
   }
 
-  // optional string _akbK = 7;
+  // optional string _Openid = 7;
   if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_akbk().data(), this->_akbk().length(),
+      this->_openid().data(), this->_openid().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSLoginResponse._akbK");
+      "MMPro.micromsg.JSLoginResponse._Openid");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->_akbk(), output);
+      7, this->_openid(), output);
   }
 
-  // optional string _amne = 8;
+  // optional string _HasSessionKey = 8;
   if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_amne().data(), this->_amne().length(),
+      this->_hassessionkey().data(), this->_hassessionkey().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSLoginResponse._amne");
+      "MMPro.micromsg.JSLoginResponse._HasSessionKey");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      8, this->_amne(), output);
+      8, this->_hassessionkey(), output);
   }
 
-  // optional string _amnf = 9;
+  // optional string _SessionTicket = 9;
   if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_amnf().data(), this->_amnf().length(),
+      this->_sessionticket().data(), this->_sessionticket().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSLoginResponse._amnf");
+      "MMPro.micromsg.JSLoginResponse._SessionTicket");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      9, this->_amnf(), output);
+      9, this->_sessionticket(), output);
   }
 
-  // optional uint32 _amng = 10;
+  // optional uint32 _Lifespan = 10;
   if (cached_has_bits & 0x00000400u) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(10, this->_amng(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(10, this->_lifespan(), output);
   }
 
   // optional string _State = 11;
@@ -2186,14 +670,14 @@ void JSLoginResponse::SerializeWithCachedSizes(
       11, this->_state(), output);
   }
 
-  // optional string _tnG = 12;
+  // optional string _Signature = 12;
   if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_tng().data(), this->_tng().length(),
+      this->_signature().data(), this->_signature().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSLoginResponse._tnG");
+      "MMPro.micromsg.JSLoginResponse._Signature");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      12, this->_tng(), output);
+      12, this->_signature(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2217,11 +701,11 @@ void JSLoginResponse::SerializeWithCachedSizes(
         1, *this->_baseresponse_, deterministic, target);
   }
 
-  // optional .MMPro.micromsg.Error _Error = 2;
+  // optional .MMPro.micromsg.JsApiBaseResponse _JsApiBaseResponse = 2;
   if (cached_has_bits & 0x00000200u) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        2, *this->_error_, deterministic, target);
+        2, *this->_jsapibaseresponse_, deterministic, target);
   }
 
   // optional string _Code = 3;
@@ -2235,11 +719,11 @@ void JSLoginResponse::SerializeWithCachedSizes(
         3, this->_code(), target);
   }
 
-  // repeated .MMPro.micromsg.JSApiAuthorise _Authorise = 4;
-  for (unsigned int i = 0, n = this->_authorise_size(); i < n; i++) {
+  // repeated .MMPro.micromsg.ScopeList _ScopeList = 4;
+  for (unsigned int i = 0, n = this->_scopelist_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        4, this->_authorise(i), deterministic, target);
+        4, this->_scopelist(i), deterministic, target);
   }
 
   // optional string _AppName = 5;
@@ -2264,42 +748,42 @@ void JSLoginResponse::SerializeWithCachedSizes(
         6, this->_appiconurl(), target);
   }
 
-  // optional string _akbK = 7;
+  // optional string _Openid = 7;
   if (cached_has_bits & 0x00000008u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_akbk().data(), this->_akbk().length(),
+      this->_openid().data(), this->_openid().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSLoginResponse._akbK");
+      "MMPro.micromsg.JSLoginResponse._Openid");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        7, this->_akbk(), target);
+        7, this->_openid(), target);
   }
 
-  // optional string _amne = 8;
+  // optional string _HasSessionKey = 8;
   if (cached_has_bits & 0x00000010u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_amne().data(), this->_amne().length(),
+      this->_hassessionkey().data(), this->_hassessionkey().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSLoginResponse._amne");
+      "MMPro.micromsg.JSLoginResponse._HasSessionKey");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        8, this->_amne(), target);
+        8, this->_hassessionkey(), target);
   }
 
-  // optional string _amnf = 9;
+  // optional string _SessionTicket = 9;
   if (cached_has_bits & 0x00000020u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_amnf().data(), this->_amnf().length(),
+      this->_sessionticket().data(), this->_sessionticket().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSLoginResponse._amnf");
+      "MMPro.micromsg.JSLoginResponse._SessionTicket");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        9, this->_amnf(), target);
+        9, this->_sessionticket(), target);
   }
 
-  // optional uint32 _amng = 10;
+  // optional uint32 _Lifespan = 10;
   if (cached_has_bits & 0x00000400u) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(10, this->_amng(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(10, this->_lifespan(), target);
   }
 
   // optional string _State = 11;
@@ -2313,15 +797,15 @@ void JSLoginResponse::SerializeWithCachedSizes(
         11, this->_state(), target);
   }
 
-  // optional string _tnG = 12;
+  // optional string _Signature = 12;
   if (cached_has_bits & 0x00000080u) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_tng().data(), this->_tng().length(),
+      this->_signature().data(), this->_signature().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "MMPro.micromsg.JSLoginResponse._tnG");
+      "MMPro.micromsg.JSLoginResponse._Signature");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        12, this->_tng(), target);
+        12, this->_signature(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2347,14 +831,14 @@ size_t JSLoginResponse::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->_baseresponse_);
   }
-  // repeated .MMPro.micromsg.JSApiAuthorise _Authorise = 4;
+  // repeated .MMPro.micromsg.ScopeList _ScopeList = 4;
   {
-    unsigned int count = this->_authorise_size();
+    unsigned int count = this->_scopelist_size();
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->_authorise(i));
+          this->_scopelist(i));
     }
   }
 
@@ -2380,25 +864,25 @@ size_t JSLoginResponse::ByteSizeLong() const {
           this->_appiconurl());
     }
 
-    // optional string _akbK = 7;
-    if (has__akbk()) {
+    // optional string _Openid = 7;
+    if (has__openid()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_akbk());
+          this->_openid());
     }
 
-    // optional string _amne = 8;
-    if (has__amne()) {
+    // optional string _HasSessionKey = 8;
+    if (has__hassessionkey()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_amne());
+          this->_hassessionkey());
     }
 
-    // optional string _amnf = 9;
-    if (has__amnf()) {
+    // optional string _SessionTicket = 9;
+    if (has__sessionticket()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_amnf());
+          this->_sessionticket());
     }
 
     // optional string _State = 11;
@@ -2408,27 +892,27 @@ size_t JSLoginResponse::ByteSizeLong() const {
           this->_state());
     }
 
-    // optional string _tnG = 12;
-    if (has__tng()) {
+    // optional string _Signature = 12;
+    if (has__signature()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->_tng());
+          this->_signature());
     }
 
   }
   if (_has_bits_[8 / 32] & 1536u) {
-    // optional .MMPro.micromsg.Error _Error = 2;
-    if (has__error()) {
+    // optional .MMPro.micromsg.JsApiBaseResponse _JsApiBaseResponse = 2;
+    if (has__jsapibaseresponse()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          *this->_error_);
+          *this->_jsapibaseresponse_);
     }
 
-    // optional uint32 _amng = 10;
-    if (has__amng()) {
+    // optional uint32 _Lifespan = 10;
+    if (has__lifespan()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
-          this->_amng());
+          this->_lifespan());
     }
 
   }
@@ -2461,7 +945,7 @@ void JSLoginResponse::MergeFrom(const JSLoginResponse& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _authorise_.MergeFrom(from._authorise_);
+  _scopelist_.MergeFrom(from._scopelist_);
   cached_has_bits = from._has_bits_[0];
   if (cached_has_bits & 255u) {
     if (cached_has_bits & 0x00000001u) {
@@ -2477,24 +961,24 @@ void JSLoginResponse::MergeFrom(const JSLoginResponse& from) {
       _appiconurl_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._appiconurl_);
     }
     if (cached_has_bits & 0x00000008u) {
-      set_has__akbk();
-      _akbk_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._akbk_);
+      set_has__openid();
+      _openid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._openid_);
     }
     if (cached_has_bits & 0x00000010u) {
-      set_has__amne();
-      _amne_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._amne_);
+      set_has__hassessionkey();
+      _hassessionkey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._hassessionkey_);
     }
     if (cached_has_bits & 0x00000020u) {
-      set_has__amnf();
-      _amnf_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._amnf_);
+      set_has__sessionticket();
+      _sessionticket_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._sessionticket_);
     }
     if (cached_has_bits & 0x00000040u) {
       set_has__state();
       _state_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._state_);
     }
     if (cached_has_bits & 0x00000080u) {
-      set_has__tng();
-      _tng_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._tng_);
+      set_has__signature();
+      _signature_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from._signature_);
     }
   }
   if (cached_has_bits & 1792u) {
@@ -2502,10 +986,10 @@ void JSLoginResponse::MergeFrom(const JSLoginResponse& from) {
       mutable__baseresponse()->::MMPro::micromsg::BaseResponse::MergeFrom(from._baseresponse());
     }
     if (cached_has_bits & 0x00000200u) {
-      mutable__error()->::MMPro::micromsg::Error::MergeFrom(from._error());
+      mutable__jsapibaseresponse()->::MMPro::micromsg::JsApiBaseResponse::MergeFrom(from._jsapibaseresponse());
     }
     if (cached_has_bits & 0x00000400u) {
-      _amng_ = from._amng_;
+      _lifespan_ = from._lifespan_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -2538,18 +1022,18 @@ void JSLoginResponse::Swap(JSLoginResponse* other) {
   InternalSwap(other);
 }
 void JSLoginResponse::InternalSwap(JSLoginResponse* other) {
-  _authorise_.InternalSwap(&other->_authorise_);
+  _scopelist_.InternalSwap(&other->_scopelist_);
   _code_.Swap(&other->_code_);
   _appname_.Swap(&other->_appname_);
   _appiconurl_.Swap(&other->_appiconurl_);
-  _akbk_.Swap(&other->_akbk_);
-  _amne_.Swap(&other->_amne_);
-  _amnf_.Swap(&other->_amnf_);
+  _openid_.Swap(&other->_openid_);
+  _hassessionkey_.Swap(&other->_hassessionkey_);
+  _sessionticket_.Swap(&other->_sessionticket_);
   _state_.Swap(&other->_state_);
-  _tng_.Swap(&other->_tng_);
+  _signature_.Swap(&other->_signature_);
   std::swap(_baseresponse_, other->_baseresponse_);
-  std::swap(_error_, other->_error_);
-  std::swap(_amng_, other->_amng_);
+  std::swap(_jsapibaseresponse_, other->_jsapibaseresponse_);
+  std::swap(_lifespan_, other->_lifespan_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -2608,49 +1092,49 @@ void JSLoginResponse::set_allocated__baseresponse(::MMPro::micromsg::BaseRespons
   // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._BaseResponse)
 }
 
-// optional .MMPro.micromsg.Error _Error = 2;
-bool JSLoginResponse::has__error() const {
+// optional .MMPro.micromsg.JsApiBaseResponse _JsApiBaseResponse = 2;
+bool JSLoginResponse::has__jsapibaseresponse() const {
   return (_has_bits_[0] & 0x00000200u) != 0;
 }
-void JSLoginResponse::set_has__error() {
+void JSLoginResponse::set_has__jsapibaseresponse() {
   _has_bits_[0] |= 0x00000200u;
 }
-void JSLoginResponse::clear_has__error() {
+void JSLoginResponse::clear_has__jsapibaseresponse() {
   _has_bits_[0] &= ~0x00000200u;
 }
-void JSLoginResponse::clear__error() {
-  if (_error_ != NULL) _error_->::MMPro::micromsg::Error::Clear();
-  clear_has__error();
+void JSLoginResponse::clear__jsapibaseresponse() {
+  if (_jsapibaseresponse_ != NULL) _jsapibaseresponse_->::MMPro::micromsg::JsApiBaseResponse::Clear();
+  clear_has__jsapibaseresponse();
 }
-const ::MMPro::micromsg::Error& JSLoginResponse::_error() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._Error)
-  return _error_ != NULL ? *_error_
-                         : *::MMPro::micromsg::Error::internal_default_instance();
+const ::MMPro::micromsg::JsApiBaseResponse& JSLoginResponse::_jsapibaseresponse() const {
+  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._JsApiBaseResponse)
+  return _jsapibaseresponse_ != NULL ? *_jsapibaseresponse_
+                         : *::MMPro::micromsg::JsApiBaseResponse::internal_default_instance();
 }
-::MMPro::micromsg::Error* JSLoginResponse::mutable__error() {
-  set_has__error();
-  if (_error_ == NULL) {
-    _error_ = new ::MMPro::micromsg::Error;
+::MMPro::micromsg::JsApiBaseResponse* JSLoginResponse::mutable__jsapibaseresponse() {
+  set_has__jsapibaseresponse();
+  if (_jsapibaseresponse_ == NULL) {
+    _jsapibaseresponse_ = new ::MMPro::micromsg::JsApiBaseResponse;
   }
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._Error)
-  return _error_;
+  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._JsApiBaseResponse)
+  return _jsapibaseresponse_;
 }
-::MMPro::micromsg::Error* JSLoginResponse::release__error() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSLoginResponse._Error)
-  clear_has__error();
-  ::MMPro::micromsg::Error* temp = _error_;
-  _error_ = NULL;
+::MMPro::micromsg::JsApiBaseResponse* JSLoginResponse::release__jsapibaseresponse() {
+  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSLoginResponse._JsApiBaseResponse)
+  clear_has__jsapibaseresponse();
+  ::MMPro::micromsg::JsApiBaseResponse* temp = _jsapibaseresponse_;
+  _jsapibaseresponse_ = NULL;
   return temp;
 }
-void JSLoginResponse::set_allocated__error(::MMPro::micromsg::Error* _error) {
-  delete _error_;
-  _error_ = _error;
-  if (_error) {
-    set_has__error();
+void JSLoginResponse::set_allocated__jsapibaseresponse(::MMPro::micromsg::JsApiBaseResponse* _jsapibaseresponse) {
+  delete _jsapibaseresponse_;
+  _jsapibaseresponse_ = _jsapibaseresponse;
+  if (_jsapibaseresponse) {
+    set_has__jsapibaseresponse();
   } else {
-    clear_has__error();
+    clear_has__jsapibaseresponse();
   }
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._Error)
+  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._JsApiBaseResponse)
 }
 
 // optional string _Code = 3;
@@ -2716,34 +1200,34 @@ void JSLoginResponse::set_allocated__code(::std::string* _code) {
   // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._Code)
 }
 
-// repeated .MMPro.micromsg.JSApiAuthorise _Authorise = 4;
-int JSLoginResponse::_authorise_size() const {
-  return _authorise_.size();
+// repeated .MMPro.micromsg.ScopeList _ScopeList = 4;
+int JSLoginResponse::_scopelist_size() const {
+  return _scopelist_.size();
 }
-void JSLoginResponse::clear__authorise() {
-  _authorise_.Clear();
+void JSLoginResponse::clear__scopelist() {
+  _scopelist_.Clear();
 }
-const ::MMPro::micromsg::JSApiAuthorise& JSLoginResponse::_authorise(int index) const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._Authorise)
-  return _authorise_.Get(index);
+const ::MMPro::micromsg::ScopeList& JSLoginResponse::_scopelist(int index) const {
+  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._ScopeList)
+  return _scopelist_.Get(index);
 }
-::MMPro::micromsg::JSApiAuthorise* JSLoginResponse::mutable__authorise(int index) {
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._Authorise)
-  return _authorise_.Mutable(index);
+::MMPro::micromsg::ScopeList* JSLoginResponse::mutable__scopelist(int index) {
+  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._ScopeList)
+  return _scopelist_.Mutable(index);
 }
-::MMPro::micromsg::JSApiAuthorise* JSLoginResponse::add__authorise() {
-  // @@protoc_insertion_point(field_add:MMPro.micromsg.JSLoginResponse._Authorise)
-  return _authorise_.Add();
+::MMPro::micromsg::ScopeList* JSLoginResponse::add__scopelist() {
+  // @@protoc_insertion_point(field_add:MMPro.micromsg.JSLoginResponse._ScopeList)
+  return _scopelist_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::MMPro::micromsg::JSApiAuthorise >*
-JSLoginResponse::mutable__authorise() {
-  // @@protoc_insertion_point(field_mutable_list:MMPro.micromsg.JSLoginResponse._Authorise)
-  return &_authorise_;
+::google::protobuf::RepeatedPtrField< ::MMPro::micromsg::ScopeList >*
+JSLoginResponse::mutable__scopelist() {
+  // @@protoc_insertion_point(field_mutable_list:MMPro.micromsg.JSLoginResponse._ScopeList)
+  return &_scopelist_;
 }
-const ::google::protobuf::RepeatedPtrField< ::MMPro::micromsg::JSApiAuthorise >&
-JSLoginResponse::_authorise() const {
-  // @@protoc_insertion_point(field_list:MMPro.micromsg.JSLoginResponse._Authorise)
-  return _authorise_;
+const ::google::protobuf::RepeatedPtrField< ::MMPro::micromsg::ScopeList >&
+JSLoginResponse::_scopelist() const {
+  // @@protoc_insertion_point(field_list:MMPro.micromsg.JSLoginResponse._ScopeList)
+  return _scopelist_;
 }
 
 // optional string _AppName = 5;
@@ -2872,217 +1356,217 @@ void JSLoginResponse::set_allocated__appiconurl(::std::string* _appiconurl) {
   // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._AppIConUrl)
 }
 
-// optional string _akbK = 7;
-bool JSLoginResponse::has__akbk() const {
+// optional string _Openid = 7;
+bool JSLoginResponse::has__openid() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
-void JSLoginResponse::set_has__akbk() {
+void JSLoginResponse::set_has__openid() {
   _has_bits_[0] |= 0x00000008u;
 }
-void JSLoginResponse::clear_has__akbk() {
+void JSLoginResponse::clear_has__openid() {
   _has_bits_[0] &= ~0x00000008u;
 }
-void JSLoginResponse::clear__akbk() {
-  _akbk_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__akbk();
+void JSLoginResponse::clear__openid() {
+  _openid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has__openid();
 }
-const ::std::string& JSLoginResponse::_akbk() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._akbK)
-  return _akbk_.GetNoArena();
+const ::std::string& JSLoginResponse::_openid() const {
+  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._Openid)
+  return _openid_.GetNoArena();
 }
-void JSLoginResponse::set__akbk(const ::std::string& value) {
-  set_has__akbk();
-  _akbk_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSLoginResponse._akbK)
+void JSLoginResponse::set__openid(const ::std::string& value) {
+  set_has__openid();
+  _openid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSLoginResponse._Openid)
 }
 #if LANG_CXX11
-void JSLoginResponse::set__akbk(::std::string&& value) {
-  set_has__akbk();
-  _akbk_.SetNoArena(
+void JSLoginResponse::set__openid(::std::string&& value) {
+  set_has__openid();
+  _openid_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSLoginResponse._akbK)
+  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSLoginResponse._Openid)
 }
 #endif
-void JSLoginResponse::set__akbk(const char* value) {
+void JSLoginResponse::set__openid(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  set_has__akbk();
-  _akbk_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSLoginResponse._akbK)
+  set_has__openid();
+  _openid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSLoginResponse._Openid)
 }
-void JSLoginResponse::set__akbk(const char* value, size_t size) {
-  set_has__akbk();
-  _akbk_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+void JSLoginResponse::set__openid(const char* value, size_t size) {
+  set_has__openid();
+  _openid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSLoginResponse._akbK)
+  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSLoginResponse._Openid)
 }
-::std::string* JSLoginResponse::mutable__akbk() {
-  set_has__akbk();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._akbK)
-  return _akbk_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+::std::string* JSLoginResponse::mutable__openid() {
+  set_has__openid();
+  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._Openid)
+  return _openid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-::std::string* JSLoginResponse::release__akbk() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSLoginResponse._akbK)
-  clear_has__akbk();
-  return _akbk_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+::std::string* JSLoginResponse::release__openid() {
+  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSLoginResponse._Openid)
+  clear_has__openid();
+  return _openid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-void JSLoginResponse::set_allocated__akbk(::std::string* _akbk) {
-  if (_akbk != NULL) {
-    set_has__akbk();
+void JSLoginResponse::set_allocated__openid(::std::string* _openid) {
+  if (_openid != NULL) {
+    set_has__openid();
   } else {
-    clear_has__akbk();
+    clear_has__openid();
   }
-  _akbk_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _akbk);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._akbK)
+  _openid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _openid);
+  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._Openid)
 }
 
-// optional string _amne = 8;
-bool JSLoginResponse::has__amne() const {
+// optional string _HasSessionKey = 8;
+bool JSLoginResponse::has__hassessionkey() const {
   return (_has_bits_[0] & 0x00000010u) != 0;
 }
-void JSLoginResponse::set_has__amne() {
+void JSLoginResponse::set_has__hassessionkey() {
   _has_bits_[0] |= 0x00000010u;
 }
-void JSLoginResponse::clear_has__amne() {
+void JSLoginResponse::clear_has__hassessionkey() {
   _has_bits_[0] &= ~0x00000010u;
 }
-void JSLoginResponse::clear__amne() {
-  _amne_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__amne();
+void JSLoginResponse::clear__hassessionkey() {
+  _hassessionkey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has__hassessionkey();
 }
-const ::std::string& JSLoginResponse::_amne() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._amne)
-  return _amne_.GetNoArena();
+const ::std::string& JSLoginResponse::_hassessionkey() const {
+  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._HasSessionKey)
+  return _hassessionkey_.GetNoArena();
 }
-void JSLoginResponse::set__amne(const ::std::string& value) {
-  set_has__amne();
-  _amne_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSLoginResponse._amne)
+void JSLoginResponse::set__hassessionkey(const ::std::string& value) {
+  set_has__hassessionkey();
+  _hassessionkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSLoginResponse._HasSessionKey)
 }
 #if LANG_CXX11
-void JSLoginResponse::set__amne(::std::string&& value) {
-  set_has__amne();
-  _amne_.SetNoArena(
+void JSLoginResponse::set__hassessionkey(::std::string&& value) {
+  set_has__hassessionkey();
+  _hassessionkey_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSLoginResponse._amne)
+  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSLoginResponse._HasSessionKey)
 }
 #endif
-void JSLoginResponse::set__amne(const char* value) {
+void JSLoginResponse::set__hassessionkey(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  set_has__amne();
-  _amne_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSLoginResponse._amne)
+  set_has__hassessionkey();
+  _hassessionkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSLoginResponse._HasSessionKey)
 }
-void JSLoginResponse::set__amne(const char* value, size_t size) {
-  set_has__amne();
-  _amne_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+void JSLoginResponse::set__hassessionkey(const char* value, size_t size) {
+  set_has__hassessionkey();
+  _hassessionkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSLoginResponse._amne)
+  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSLoginResponse._HasSessionKey)
 }
-::std::string* JSLoginResponse::mutable__amne() {
-  set_has__amne();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._amne)
-  return _amne_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+::std::string* JSLoginResponse::mutable__hassessionkey() {
+  set_has__hassessionkey();
+  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._HasSessionKey)
+  return _hassessionkey_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-::std::string* JSLoginResponse::release__amne() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSLoginResponse._amne)
-  clear_has__amne();
-  return _amne_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+::std::string* JSLoginResponse::release__hassessionkey() {
+  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSLoginResponse._HasSessionKey)
+  clear_has__hassessionkey();
+  return _hassessionkey_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-void JSLoginResponse::set_allocated__amne(::std::string* _amne) {
-  if (_amne != NULL) {
-    set_has__amne();
+void JSLoginResponse::set_allocated__hassessionkey(::std::string* _hassessionkey) {
+  if (_hassessionkey != NULL) {
+    set_has__hassessionkey();
   } else {
-    clear_has__amne();
+    clear_has__hassessionkey();
   }
-  _amne_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _amne);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._amne)
+  _hassessionkey_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _hassessionkey);
+  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._HasSessionKey)
 }
 
-// optional string _amnf = 9;
-bool JSLoginResponse::has__amnf() const {
+// optional string _SessionTicket = 9;
+bool JSLoginResponse::has__sessionticket() const {
   return (_has_bits_[0] & 0x00000020u) != 0;
 }
-void JSLoginResponse::set_has__amnf() {
+void JSLoginResponse::set_has__sessionticket() {
   _has_bits_[0] |= 0x00000020u;
 }
-void JSLoginResponse::clear_has__amnf() {
+void JSLoginResponse::clear_has__sessionticket() {
   _has_bits_[0] &= ~0x00000020u;
 }
-void JSLoginResponse::clear__amnf() {
-  _amnf_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__amnf();
+void JSLoginResponse::clear__sessionticket() {
+  _sessionticket_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has__sessionticket();
 }
-const ::std::string& JSLoginResponse::_amnf() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._amnf)
-  return _amnf_.GetNoArena();
+const ::std::string& JSLoginResponse::_sessionticket() const {
+  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._SessionTicket)
+  return _sessionticket_.GetNoArena();
 }
-void JSLoginResponse::set__amnf(const ::std::string& value) {
-  set_has__amnf();
-  _amnf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSLoginResponse._amnf)
+void JSLoginResponse::set__sessionticket(const ::std::string& value) {
+  set_has__sessionticket();
+  _sessionticket_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSLoginResponse._SessionTicket)
 }
 #if LANG_CXX11
-void JSLoginResponse::set__amnf(::std::string&& value) {
-  set_has__amnf();
-  _amnf_.SetNoArena(
+void JSLoginResponse::set__sessionticket(::std::string&& value) {
+  set_has__sessionticket();
+  _sessionticket_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSLoginResponse._amnf)
+  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSLoginResponse._SessionTicket)
 }
 #endif
-void JSLoginResponse::set__amnf(const char* value) {
+void JSLoginResponse::set__sessionticket(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  set_has__amnf();
-  _amnf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSLoginResponse._amnf)
+  set_has__sessionticket();
+  _sessionticket_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSLoginResponse._SessionTicket)
 }
-void JSLoginResponse::set__amnf(const char* value, size_t size) {
-  set_has__amnf();
-  _amnf_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+void JSLoginResponse::set__sessionticket(const char* value, size_t size) {
+  set_has__sessionticket();
+  _sessionticket_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSLoginResponse._amnf)
+  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSLoginResponse._SessionTicket)
 }
-::std::string* JSLoginResponse::mutable__amnf() {
-  set_has__amnf();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._amnf)
-  return _amnf_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+::std::string* JSLoginResponse::mutable__sessionticket() {
+  set_has__sessionticket();
+  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._SessionTicket)
+  return _sessionticket_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-::std::string* JSLoginResponse::release__amnf() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSLoginResponse._amnf)
-  clear_has__amnf();
-  return _amnf_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+::std::string* JSLoginResponse::release__sessionticket() {
+  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSLoginResponse._SessionTicket)
+  clear_has__sessionticket();
+  return _sessionticket_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-void JSLoginResponse::set_allocated__amnf(::std::string* _amnf) {
-  if (_amnf != NULL) {
-    set_has__amnf();
+void JSLoginResponse::set_allocated__sessionticket(::std::string* _sessionticket) {
+  if (_sessionticket != NULL) {
+    set_has__sessionticket();
   } else {
-    clear_has__amnf();
+    clear_has__sessionticket();
   }
-  _amnf_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _amnf);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._amnf)
+  _sessionticket_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _sessionticket);
+  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._SessionTicket)
 }
 
-// optional uint32 _amng = 10;
-bool JSLoginResponse::has__amng() const {
+// optional uint32 _Lifespan = 10;
+bool JSLoginResponse::has__lifespan() const {
   return (_has_bits_[0] & 0x00000400u) != 0;
 }
-void JSLoginResponse::set_has__amng() {
+void JSLoginResponse::set_has__lifespan() {
   _has_bits_[0] |= 0x00000400u;
 }
-void JSLoginResponse::clear_has__amng() {
+void JSLoginResponse::clear_has__lifespan() {
   _has_bits_[0] &= ~0x00000400u;
 }
-void JSLoginResponse::clear__amng() {
-  _amng_ = 0u;
-  clear_has__amng();
+void JSLoginResponse::clear__lifespan() {
+  _lifespan_ = 0u;
+  clear_has__lifespan();
 }
-::google::protobuf::uint32 JSLoginResponse::_amng() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._amng)
-  return _amng_;
+::google::protobuf::uint32 JSLoginResponse::_lifespan() const {
+  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._Lifespan)
+  return _lifespan_;
 }
-void JSLoginResponse::set__amng(::google::protobuf::uint32 value) {
-  set_has__amng();
-  _amng_ = value;
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSLoginResponse._amng)
+void JSLoginResponse::set__lifespan(::google::protobuf::uint32 value) {
+  set_has__lifespan();
+  _lifespan_ = value;
+  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSLoginResponse._Lifespan)
 }
 
 // optional string _State = 11;
@@ -3148,67 +1632,67 @@ void JSLoginResponse::set_allocated__state(::std::string* _state) {
   // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._State)
 }
 
-// optional string _tnG = 12;
-bool JSLoginResponse::has__tng() const {
+// optional string _Signature = 12;
+bool JSLoginResponse::has__signature() const {
   return (_has_bits_[0] & 0x00000080u) != 0;
 }
-void JSLoginResponse::set_has__tng() {
+void JSLoginResponse::set_has__signature() {
   _has_bits_[0] |= 0x00000080u;
 }
-void JSLoginResponse::clear_has__tng() {
+void JSLoginResponse::clear_has__signature() {
   _has_bits_[0] &= ~0x00000080u;
 }
-void JSLoginResponse::clear__tng() {
-  _tng_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  clear_has__tng();
+void JSLoginResponse::clear__signature() {
+  _signature_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  clear_has__signature();
 }
-const ::std::string& JSLoginResponse::_tng() const {
-  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._tnG)
-  return _tng_.GetNoArena();
+const ::std::string& JSLoginResponse::_signature() const {
+  // @@protoc_insertion_point(field_get:MMPro.micromsg.JSLoginResponse._Signature)
+  return _signature_.GetNoArena();
 }
-void JSLoginResponse::set__tng(const ::std::string& value) {
-  set_has__tng();
-  _tng_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSLoginResponse._tnG)
+void JSLoginResponse::set__signature(const ::std::string& value) {
+  set_has__signature();
+  _signature_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:MMPro.micromsg.JSLoginResponse._Signature)
 }
 #if LANG_CXX11
-void JSLoginResponse::set__tng(::std::string&& value) {
-  set_has__tng();
-  _tng_.SetNoArena(
+void JSLoginResponse::set__signature(::std::string&& value) {
+  set_has__signature();
+  _signature_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSLoginResponse._tnG)
+  // @@protoc_insertion_point(field_set_rvalue:MMPro.micromsg.JSLoginResponse._Signature)
 }
 #endif
-void JSLoginResponse::set__tng(const char* value) {
+void JSLoginResponse::set__signature(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  set_has__tng();
-  _tng_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSLoginResponse._tnG)
+  set_has__signature();
+  _signature_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:MMPro.micromsg.JSLoginResponse._Signature)
 }
-void JSLoginResponse::set__tng(const char* value, size_t size) {
-  set_has__tng();
-  _tng_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+void JSLoginResponse::set__signature(const char* value, size_t size) {
+  set_has__signature();
+  _signature_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSLoginResponse._tnG)
+  // @@protoc_insertion_point(field_set_pointer:MMPro.micromsg.JSLoginResponse._Signature)
 }
-::std::string* JSLoginResponse::mutable__tng() {
-  set_has__tng();
-  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._tnG)
-  return _tng_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+::std::string* JSLoginResponse::mutable__signature() {
+  set_has__signature();
+  // @@protoc_insertion_point(field_mutable:MMPro.micromsg.JSLoginResponse._Signature)
+  return _signature_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-::std::string* JSLoginResponse::release__tng() {
-  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSLoginResponse._tnG)
-  clear_has__tng();
-  return _tng_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+::std::string* JSLoginResponse::release__signature() {
+  // @@protoc_insertion_point(field_release:MMPro.micromsg.JSLoginResponse._Signature)
+  clear_has__signature();
+  return _signature_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-void JSLoginResponse::set_allocated__tng(::std::string* _tng) {
-  if (_tng != NULL) {
-    set_has__tng();
+void JSLoginResponse::set_allocated__signature(::std::string* _signature) {
+  if (_signature != NULL) {
+    set_has__signature();
   } else {
-    clear_has__tng();
+    clear_has__signature();
   }
-  _tng_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _tng);
-  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._tnG)
+  _signature_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), _signature);
+  // @@protoc_insertion_point(field_set_allocated:MMPro.micromsg.JSLoginResponse._Signature)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

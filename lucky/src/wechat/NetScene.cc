@@ -342,6 +342,30 @@ namespace lucky {
 			return  callback->WaitFor(timeout_);
 		}
 
+		int64_t NetScence::BizProfileV2Request(const std::wstring& bizUserName) {
+			function::__Instance  instance = (function::__Instance)(base_ + offset::kBizProfileMgr);
+			function::__GetBizProfileInfo GetBizProfileInfo = (function::__GetBizProfileInfo)(base_ + offset::kGetBizProfileInfo);
+			struct  GetBizProfileInfoParam
+			{
+				common::WeChatWString bizUserNameStr1;
+				uint64_t			  _0x20 = 0;
+				common::WeChatWString bizUserNameStr2;
+				char _buf[100] = { 0 };
+			};
+			GetBizProfileInfoParam param;
+			param.bizUserNameStr1 = std::move(common::WeChatWString(bizUserName));
+			param._0x20 = 3;
+			param.bizUserNameStr1 = std::move(common::WeChatWString(bizUserName));
+			std::string a3 = "";
+			return GetBizProfileInfo(instance(), reinterpret_cast<UINT64>(&param), reinterpret_cast<UINT64>(&a3), 0);
+		}
+		std::shared_ptr<BizProfileV2Resp> NetScence::BizProfileV2(const std::wstring& bizUserName) {
+			std::shared_ptr<NetSceneCallBack<BizProfileV2Resp>> callback(new NetSceneCallBack<BizProfileV2Resp>());
+			CallBackAutoTLS callBackAutoTLS(callback);
+			BizProfileV2Request(bizUserName);
+			return  callback->WaitFor(timeout_);
+		}
+
 	}
 	
 }

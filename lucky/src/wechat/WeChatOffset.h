@@ -17,6 +17,7 @@ const uint64_t kOpLogMgr = 0x1C193C0;
 const uint64_t kSnsTimeLineMgr = 0x2E6B110;
 const uint64_t kCDNServicecs = 0x1CAE4E0;
 const uint64_t kAccountServiceMgr = 0x1C1FE90;
+const uint64_t kBizProfileMgr = 0x1C136A0;
 
 const uint64_t kGetAppDataSavePath = 0x26A7780;
 const uint64_t kGetCurrentDataPath = 0x2314E40;
@@ -78,6 +79,8 @@ const uint64_t kStartupDownloadMedia = 0x2596780;
 const uint64_t kDoAddMsg = 0x23D2B10;
 const uint64_t kJSLogin =  0x27826A0;
 const uint64_t kTenPayTransferConfirm = 0x304C700;
+
+const uint64_t kGetBizProfileInfo = 0x21CC340;
 
 const uint64_t kSceneCenterStartTask = 0x2454F70;					//must do scene after auth
 const uint64_t kMessageLoop = 0x397B400;							//Chrome.MessageLoopProblem (__int64 a1, __int64 a2)

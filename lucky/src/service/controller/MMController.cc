@@ -68,17 +68,6 @@ namespace lucky {
 				 return oss.str();
 			}
 
-			std::string MMController::NetSceneJsLogin(const std::string& params) {
-				std::string waId = GetStringParam(params, "$.waId");
-				std::shared_ptr<JSLoginResponse> result = lucky::wechat::NetScence::GetInstance().JSLogin(waId);
-				std::string response = R"({"code":200,"msg":"NetSceneJsLogin."})";
-				if (result != nullptr) {
-					response = "";
-					MessageToJsonString(*result.get(), &response);
-				}
-				return response;
-			}
-
 			std::string MMController::TenPayTransferConfirm(const std::string& params) {
 				std::wstring transId = GetWStringParam(params, "$.transId");
 				std::wstring wxid = GetWStringParam(params, "$.wxid");

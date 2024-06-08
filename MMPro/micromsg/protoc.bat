@@ -52,4 +52,8 @@ D:\\protoc-3.3.0-win32\\bin\\protoc.exe --proto_path=.\\proto --cpp_out=.\\src  
 
 D:\\protoc-3.3.0-win32\\bin\\protoc.exe --proto_path=.\\proto --cpp_out=.\\src  proto\\SnsObjectDetailResponse.proto
 
+D:\\protoc-3.3.0-win32\\bin\\protoc.exe --proto_path=.\\proto --cpp_out=.\\src  proto\\ScopeList.proto
+D:\\protoc-3.3.0-win32\\bin\\protoc.exe --proto_path=.\\proto --cpp_out=.\\src  proto\\JsApiBaseResponse.proto
 D:\\protoc-3.3.0-win32\\bin\\protoc.exe --proto_path=.\\proto --cpp_out=.\\src  proto\\JSLoginResponse.proto
+
+D:\\protoc-3.3.0-win32\\bin\\protoc.exe --proto_path=.\\proto --cpp_out=.\\src  proto\\BizProfileV2Resp.proto

@@ -6,6 +6,8 @@
 #include "controller/ChatRoomController.h"
 #include "controller/MMController.h"
 #include "controller/SnsController.h"
+#include "controller/WAController.h"
+#include "controller/MPController.h"
 #include "EventLoop.h"
 
 namespace lucky {
@@ -20,6 +22,8 @@ namespace lucky {
 			MsgController::GetInstance();
 			ChatRoomController::GetInstance();
 			MMController::GetInstance();
+			WAController::GetInstance();
+			MPController::GetInstance();
 			SNSController::GetInstance();
 		}
 

@@ -11,7 +11,6 @@ namespace lucky {
 			class MMController : public HttpController<MMController> {
 			public:
 				PATHS_BEGIN
-				ADD_PATH("/api/netscene/jslogin", NetSceneJsLogin);
 				ADD_PATH("/api/netscene/getA8key", NetSceneGetA8Key);
 				ADD_PATH("/api/wechat/cdndownload", CdnDownload);  
 				ADD_PATH("/api/wechat/cdnupload", CdnUpload);
@@ -29,15 +28,11 @@ namespace lucky {
 				static std::string CdnUpload(const std::string& params);
 				//微信协议dump (TODO)
 				static std::string WxDump(const std::string& params);
-
 				static std::string GetSelfInfo(const std::string& params);
-
 				static std::string SelfDetach(const std::string& params);
-
-				//获取小程序code
-				static std::string NetSceneJsLogin(const std::string& params);
 				//确认转账收款
 				static std::string TenPayTransferConfirm(const std::string& params);
+			
 			};
 
 

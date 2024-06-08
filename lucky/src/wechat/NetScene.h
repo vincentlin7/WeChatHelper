@@ -25,6 +25,7 @@
 #include "SnsTimeLineResponse.pb.h"
 #include "SnsObjectDetailResponse.pb.h"
 #include "JSLoginResponse.pb.h"
+#include "BizProfileV2Resp.pb.h"
 
 namespace lucky {
 
@@ -92,6 +93,10 @@ namespace lucky {
 			//获取小程序code
 			int64_t JSLoginRequest(const std::string& waId);
 			std::shared_ptr<JSLoginResponse> JSLogin(const std::string& waId);
+
+			//获取公众号详情
+			int64_t BizProfileV2Request(const std::wstring& bizUserName);
+			std::shared_ptr<BizProfileV2Resp> BizProfileV2(const std::wstring& bizUserName);
 			
 
 		public:
